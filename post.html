@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post — Illusionist</title>
+  <meta name="description" content="마술 강의 포스트">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎩</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Animated Background -->
+  <div class="bg-magic"></div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">🎩</span>
+        <span>Illusionist</span>
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html" class="nav-link">Blog</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="https://github.com/finale7942" class="nav-link" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <button class="nav-menu-btn" id="nav-menu-btn" aria-label="메뉴 열기">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Post Content -->
+  <main class="post-page" id="post-container">
+    <!-- Dynamically rendered by JS -->
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="footer-text">
+        © 2026 <a href="index.html">Illusionist</a>. All rights reserved.
+      </p>
+      <div class="footer-links">
+        <a href="index.html">Blog</a>
+        <a href="about.html">About</a>
+        <a href="https://github.com/finale7942" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top -->
+  <button class="scroll-top" id="scroll-top" aria-label="맨 위로">↑</button>
+
+  <!-- Scripts -->
+  <script src="js/posts.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      renderPostDetail();
+    });
+  </script>
+</body>
+</html>

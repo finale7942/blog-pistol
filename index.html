@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Illusionist — 마술 강의 블로그</title>
+  <meta name="description" content="마술의 세계를 탐구하는 블로그. 카드 마술부터 스테이지 일루전까지, 다양한 마술 기법과 강의를 만나보세요.">
+  <meta name="keywords" content="마술, 일루전, 카드마술, 마술강의, magic, illusion">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎩</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Animated Background -->
+  <div class="bg-magic"></div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">🎩</span>
+        <span>Illusionist</span>
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html" class="nav-link active">Blog</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="https://github.com/finale7942" class="nav-link" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <button class="nav-menu-btn" id="nav-menu-btn" aria-label="메뉴 열기">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">Magic & Illusion Blog</div>
+      <h1 class="hero-title">
+        마술의 비밀을<br>
+        <span class="highlight">풀어내는</span> 공간<span class="gold">.</span>
+      </h1>
+      <p class="hero-subtitle">
+        카드 마술부터 스테이지 일루전까지,<br>
+        마술의 원리와 테크닉을 하나씩 배워봅니다.
+      </p>
+      <div class="hero-cta">
+        <a href="#posts" class="btn btn-primary">글 둘러보기 ✦</a>
+        <a href="about.html" class="btn btn-ghost">About →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Posts Section -->
+  <section class="section" id="posts">
+    <div class="section-inner">
+      <div class="section-header animate-on-scroll">
+        <p class="section-label">Latest Posts</p>
+        <h2 class="section-title">최근 글</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <!-- Category Filter -->
+      <div class="filter-bar" id="filter-bar"></div>
+
+      <!-- Posts Grid -->
+      <div class="posts-grid" id="posts-grid"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="footer-text">
+        © 2026 <a href="index.html">Illusionist</a>. All rights reserved.
+      </p>
+      <div class="footer-links">
+        <a href="index.html">Blog</a>
+        <a href="about.html">About</a>
+        <a href="https://github.com/finale7942" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top -->
+  <button class="scroll-top" id="scroll-top" aria-label="맨 위로">↑</button>
+
+  <!-- Scripts -->
+  <script src="js/posts.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Initialize Home Page
+    document.addEventListener('DOMContentLoaded', () => {
+      initCategoryFilter();
+      renderPosts('전체');
+    });
+  </script>
+</body>
+</html>
