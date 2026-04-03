@@ -119,6 +119,60 @@ const POSTS = [
     `
   },
   {
+    id: "coin-magic-basics",
+    title: "코인 마술의 기초: 클래식 팜",
+    excerpt: "동전을 손바닥에 숨기는 가장 기본적인 기법, 클래식 팜(Classic Palm)을 마스터해봅시다.",
+    category: "코인마술",
+    date: "2026-04-03",
+    readTime: "10분",
+    image: null,
+    content: `
+      <h2>클래식 팜(Classic Palm)이란?</h2>
+      <p>클래식 팜은 동전 마술의 가장 기초적이면서도 중요한 기법입니다. 동전을 <strong>손바닥 중앙의 근육을 이용해 고정</strong>하는 방법으로, 손가락을 자유롭게 움직일 수 있어 매우 강력한 효과를 줍니다.</p>
+
+      <h2>준비물</h2>
+      <ul>
+        <li>하프 달러(Half Dollar) 사이즈 동전 (500원 동전도 가능)</li>
+        <li>핸드크림 (손이 너무 건조하면 어렵습니다)</li>
+        <li>연습용 거울</li>
+      </ul>
+
+      <h2>단계별 학습</h2>
+
+      <h3>Step 1: 동전의 위치 선정</h3>
+      <p>동전이 손바닥 어디에 위치해야 하는지 정확히 파악하는 것이 첫 번째 단계입니다.</p>
+      <ol>
+        <li>손바닥을 평평하게 폅니다</li>
+        <li>동전을 손바닥 정중앙보다 약간 아래, 엄지 근육(Thenar)과 새끼손가락 쪽 근육(Hypothenar) 사이에 놓습니다</li>
+        <li>두 근육이 동전을 양옆에서 가볍게 눌러주는 지점을 찾습니다</li>
+      </ol>
+      <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 1.5rem 0; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+        <iframe src="https://www.youtube.com/embed/v9qC97XvT8E?start=30" title="Step 1 Video" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" allowfullscreen></iframe>
+      </div>
+      <p style="text-align: center; margin-bottom: 2.5rem; font-size: 0.85rem;">
+        <a href="https://www.youtube.com/watch?v=v9qC97XvT8E&t=30s" target="_blank" style="color: var(--clr-accent-gold); text-decoration: underline;">👉 유튜브 원본 영상 페이지로 직접 이동해서 보기 (클래식 팜 기초)</a>
+      </p>
+
+      <h3>Step 2: 근육의 수축과 고정</h3>
+      <p>동전을 단순히 올리는 게 아니라, 근육을 미세하게 수축시켜 동전을 <strong>'잡는'</strong> 느낌을 익혀야 합니다.</p>
+      <ol>
+        <li>동전을 위치시킨 상태에서 손바닥을 살짝 오므립니다</li>
+        <li>손가락은 힘을 빼고 자연스럽게 펴두어야 합니다</li>
+        <li>손을 뒤집었을 때 동전이 떨어지지 않을 정도의 최소한의 힘만 사용합니다</li>
+      </ol>
+
+      <h3>Step 3: 자연스러운 손모양 (Relaxation)</h3>
+      <p>가장 중요한 단계입니다. 동전을 잡고 있으면서도 관객이 눈치채지 못하도록 <em>'아무것도 잡지 않은 것처럼'</em> 보여야 합니다.</p>
+      <ul>
+        <li><strong>손가락 이완</strong>: 손가락이 굳어있으면 관객은 의심합니다</li>
+        <li><strong>관절 움직임</strong>: 동전을 잡은 상태에서 손가락 마디마디를 자유롭게 움직여보세요</li>
+        <li><strong>물건 잡기</strong>: 동전을 팜한 상태에서 펜이나 다른 물건을 자연스럽게 잡아보는 연습을 하세요</li>
+      </ul>
+
+      <blockquote>"동전 마술의 마법은 손바닥이 아닌, 관객의 시선이 머물지 않는 여백에서 일어납니다." — 코인 마술의 格言</blockquote>
+    `
+  },
+  {
     id: "stage-presence",
     title: "무대 위의 존재감: 쇼맨십의 비밀",
     excerpt: "같은 트릭이라도 퍼포먼스에 따라 천지차이. 관객을 사로잡는 무대 존재감을 만드는 방법을 공유합니다.",
