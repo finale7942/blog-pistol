@@ -121,7 +121,7 @@ function renderPosts(category) {
   if (posts.length === 0) {
     grid.innerHTML = `
       <div class="empty-state" style="grid-column: 1/-1;">
-        <div class="icon">🎩</div>
+        <div class="icon">🪄</div>
         <p>아직 이 카테고리에 글이 없습니다.</p>
       </div>
     `;

@@ -1,4 +1,4 @@
-# 🎩 Illusionist
+# 🪄 Illusionist
 
 마술 강의 & 일루전 블로그
 
