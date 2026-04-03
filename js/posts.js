@@ -120,7 +120,7 @@ const POSTS = [
   },
   {
     id: "coin-magic-basics",
-    title: "코인 마술의 기초: 클래식 팜",
+    title: "코인 마술 기초: 클래식 팜 [업데이트 완료]",
     excerpt: "동전을 손바닥에 숨기는 가장 기본적인 기법, 클래식 팜(Classic Palm)을 마스터해봅시다.",
     category: "코인마술",
     date: "2026-04-03",
