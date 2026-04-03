@@ -147,10 +147,10 @@ const POSTS = [
         <li>두 근육이 동전을 양옆에서 가볍게 눌러주는 지점을 찾습니다</li>
       </ol>
       <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 1.5rem 0; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
-        <iframe src="https://www.youtube.com/embed/3u_9pS823dY?start=30" title="Step 1 Video" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/nE53tH8Rj8Q?start=30" title="Step 1 Video" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" allowfullscreen></iframe>
       </div>
       <p style="text-align: center; margin-bottom: 2.5rem; font-size: 0.85rem;">
-        <a href="https://www.youtube.com/watch?v=3u_9pS823dY&t=30s" target="_blank" style="color: var(--clr-accent-gold); text-decoration: underline;">👉 유튜브 원본 영상 페이지로 직접 이동해서 보기 (클래식 팜 기초 강좌)</a>
+        <a href="https://www.youtube.com/watch?v=nE53tH8Rj8Q&t=30s" target="_blank" style="color: var(--clr-accent-gold); text-decoration: underline;">👉 유튜브 원본 영상 페이지로 직접 이동해서 보기 (클래식 팜 기초 강좌)</a>
       </p>
 
       <h3>Step 2: 근육의 수축과 고정</h3>
