@@ -11,17 +11,17 @@
    ================================================ */
 :root {
   /* -- Colors -- */
-  --clr-bg-primary: #08070e;
-  --clr-bg-secondary: #0f0e1a;
-  --clr-bg-card: rgba(18, 16, 36, 0.7);
-  --clr-bg-card-hover: rgba(26, 23, 50, 0.85);
+  --clr-bg-primary: #050505;
+  --clr-bg-secondary: #0a0a0a;
+  --clr-bg-card: rgba(15, 15, 15, 0.7);
+  --clr-bg-card-hover: rgba(25, 25, 20, 0.85);
   --clr-bg-glass: rgba(255, 255, 255, 0.03);
-  --clr-border: rgba(255, 255, 255, 0.06);
-  --clr-border-hover: rgba(139, 92, 246, 0.3);
+  --clr-border: rgba(255, 255, 255, 0.08);
+  --clr-border-hover: rgba(245, 193, 66, 0.3);
 
-  --clr-text-primary: #eee8fa;
-  --clr-text-secondary: #9b8ec4;
-  --clr-text-muted: #5c5280;
+  --clr-text-primary: #f5f5f5;
+  --clr-text-secondary: #b5b0a1;
+  --clr-text-muted: #6b6659;
 
   --clr-accent-purple: #8B5CF6;
   --clr-accent-purple-glow: rgba(139, 92, 246, 0.25);
@@ -31,10 +31,10 @@
   --clr-accent-cyan: #22D3EE;
 
   /* -- Gradients -- */
-  --grad-hero: linear-gradient(135deg, #08070e 0%, #1a0e2e 40%, #0f0e1a 100%);
-  --grad-accent: linear-gradient(135deg, #8B5CF6, #EC4899);
+  --grad-hero: linear-gradient(135deg, #000000 0%, #2a1f00 40%, #000000 100%);
+  --grad-accent: linear-gradient(135deg, #F5C142, #F59E0B);
   --grad-gold: linear-gradient(135deg, #F5C142, #F59E0B);
-  --grad-card: linear-gradient(145deg, rgba(139, 92, 246, 0.08), rgba(236, 72, 153, 0.04));
+  --grad-card: linear-gradient(145deg, rgba(245, 193, 66, 0.08), rgba(200, 150, 40, 0.03));
 
   /* -- Typography -- */
   --font-display: 'Playfair Display', Georgia, serif;
@@ -156,9 +156,9 @@ button {
   width: 200%;
   height: 200%;
   background:
-    radial-gradient(ellipse 600px 600px at 20% 30%, rgba(139, 92, 246, 0.08) 0%, transparent 70%),
-    radial-gradient(ellipse 500px 500px at 80% 20%, rgba(236, 72, 153, 0.05) 0%, transparent 70%),
-    radial-gradient(ellipse 400px 400px at 60% 80%, rgba(245, 193, 66, 0.04) 0%, transparent 70%);
+    radial-gradient(ellipse 600px 600px at 20% 30%, rgba(245, 193, 66, 0.15) 0%, transparent 70%),
+    radial-gradient(ellipse 500px 500px at 80% 20%, rgba(200, 150, 40, 0.1) 0%, transparent 70%),
+    radial-gradient(ellipse 400px 400px at 60% 80%, rgba(255, 215, 0, 0.1) 0%, transparent 70%);
   animation: bgShift 20s ease-in-out infinite alternate;
 }
 
@@ -174,12 +174,12 @@ button {
   position: fixed;
   width: 2px;
   height: 2px;
-  background: var(--clr-accent-gold);
+  background: #ffffff;
   border-radius: 50%;
   pointer-events: none;
   z-index: -1;
   animation: sparkleFloat linear infinite;
-  box-shadow: 0 0 6px var(--clr-accent-gold), 0 0 12px var(--clr-accent-gold-glow);
+  box-shadow: 0 0 8px #ffffff, 0 0 16px rgba(255, 255, 255, 0.8), 0 0 24px rgba(255, 255, 255, 0.6);
 }
 
 @keyframes sparkleFloat {

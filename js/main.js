@@ -30,15 +30,12 @@ function createSparkle(container, index) {
   const size = 1 + Math.random() * 2;
   const duration = 8 + Math.random() * 12;
   const delay = Math.random() * duration;
-  const hue = Math.random() > 0.5 ? '45' : '270'; // gold or purple
-
   sparkle.style.cssText = `
     left: ${left}%;
     width: ${size}px;
     height: ${size}px;
     animation-duration: ${duration}s;
     animation-delay: -${delay}s;
-    filter: hue-rotate(${hue}deg);
   `;
 
   container.appendChild(sparkle);
@@ -131,7 +128,7 @@ function renderPosts(category) {
   grid.innerHTML = posts.map((post, i) => `
     <article class="post-card animate-on-scroll" style="transition-delay: ${i * 100}ms" onclick="location.href='post.html?id=${post.id}'">
       <div class="post-card-image">
-        <div style="width:100%;height:100%;background:linear-gradient(135deg, rgba(139,92,246,0.2) 0%, rgba(236,72,153,0.1) 100%);display:flex;align-items:center;justify-content:center;font-size:3rem;">
+        <div style="width:100%;height:100%;background:linear-gradient(135deg, rgba(245,193,66,0.2) 0%, rgba(200,150,40,0.1) 100%);display:flex;align-items:center;justify-content:center;font-size:3rem;">
           ${post.category === '카드마술' ? '🃏' : post.category === '기초이론' ? '📖' : '🎭'}
         </div>
         <div class="overlay"></div>
