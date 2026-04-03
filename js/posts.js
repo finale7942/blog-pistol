@@ -78,6 +78,12 @@ const POSTS = [
         <li>왼손 새끼손가락 끝을 그 틈에 살짝 끼워 유지합니다</li>
         <li>이 상태가 외부에서 보이면 안 됩니다</li>
       </ol>
+      <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 1.5rem 0; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+        <iframe src="https://www.youtube.com/embed/Gjd4EDm3EWU?start=15" title="Step 1 Video" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" allowfullscreen></iframe>
+      </div>
+      <p style="text-align: center; margin-bottom: 2.5rem; font-size: 0.85rem;">
+        <a href="https://www.youtube.com/results?search_query=핑키+브레이크+하는법" target="_blank" style="color: var(--clr-accent-gold); text-decoration: underline;">[Step 1] 핑키 브레이크 영상 더 찾아보기</a>
+      </p>
 
       <h3>Step 2: 턴오버 (Turnover)</h3>
       <p>브레이크 위의 두 장을 <strong>한 장처럼 자연스럽게 뒤집어</strong> 보여줍니다.</p>
@@ -87,6 +93,12 @@ const POSTS = [
         <li>관객에게 "이것이 당신의 카드입니다"라고 보여줍니다</li>
         <li>다시 뒤집어 놓으면 진짜 맨 위 카드는 관객이 본 카드가 아닙니다</li>
       </ol>
+      <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 1.5rem 0; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+        <iframe src="https://www.youtube.com/embed/Gjd4EDm3EWU?start=80" title="Step 2 Video" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" allowfullscreen></iframe>
+      </div>
+      <p style="text-align: center; margin-bottom: 2.5rem; font-size: 0.85rem;">
+        <a href="https://www.youtube.com/results?search_query=더블리프트+턴오버" target="_blank" style="color: var(--clr-accent-gold); text-decoration: underline;">[Step 2] 더블리프트 턴오버 영상 더 찾아보기</a>
+      </p>
 
       <h3>Step 3: 자연스러움의 완성</h3>
       <p>기술적으로 할 수 있는 것과 관객 앞에서 사용할 수 있는 것은 다릅니다. 아래 포인트를 반드시 체크하세요:</p>
@@ -96,6 +108,12 @@ const POSTS = [
         <li><strong>속도</strong>: 한 장 넘길 때와 같은 속도로 하세요</li>
         <li><strong>시선</strong>: 카드가 아닌 관객을 보면서 하세요</li>
       </ul>
+      <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 1.5rem 0; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+        <iframe src="https://www.youtube.com/embed/Gjd4EDm3EWU?start=150" title="Step 3 Video" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" allowfullscreen></iframe>
+      </div>
+      <p style="text-align: center; margin-bottom: 2.5rem; font-size: 0.85rem;">
+        <a href="https://www.youtube.com/results?search_query=마술+자연스럽게+하는법" target="_blank" style="color: var(--clr-accent-gold); text-decoration: underline;">[Step 3] 자연스러운 기술 연습법 영상 찾기</a>
+      </p>
 
       <blockquote>"연습은 완벽을 만들지 않습니다. 완벽한 연습이 완벽을 만듭니다." — 카드 마술의 格言</blockquote>
     `
