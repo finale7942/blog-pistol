@@ -189,8 +189,8 @@ function getPostsByCategory(category) {
 function getAdjacentPosts(currentId) {
   const idx = POSTS.findIndex(p => p.id === currentId);
   return {
-    prev: idx < POSTS.length - 1 ? POSTS[idx + 1] : null,
-    next: idx > 0 ? POSTS[idx - 1] : null
+    prev: idx > 0 ? POSTS[idx - 1] : null,
+    next: idx < POSTS.length - 1 ? POSTS[idx + 1] : null
   };
 }
 
