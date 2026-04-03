@@ -82,7 +82,7 @@ const POSTS = [
         <iframe src="https://www.youtube.com/embed/Gjd4EDm3EWU?start=15" title="Step 1 Video" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" allowfullscreen></iframe>
       </div>
       <p style="text-align: center; margin-bottom: 2.5rem; font-size: 0.85rem;">
-        <a href="https://www.youtube.com/results?search_query=핑키+브레이크+하는법" target="_blank" style="color: var(--clr-accent-gold); text-decoration: underline;">[Step 1] 핑키 브레이크 영상 더 찾아보기</a>
+        <a href="https://www.youtube.com/watch?v=Gjd4EDm3EWU&t=15s" target="_blank" style="color: var(--clr-accent-gold); text-decoration: underline;">👉 유튜브 원본 영상 페이지로 직접 이동해서 보기 (Step 1 구간)</a>
       </p>
 
       <h3>Step 2: 턴오버 (Turnover)</h3>
@@ -97,7 +97,7 @@ const POSTS = [
         <iframe src="https://www.youtube.com/embed/Gjd4EDm3EWU?start=80" title="Step 2 Video" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" allowfullscreen></iframe>
       </div>
       <p style="text-align: center; margin-bottom: 2.5rem; font-size: 0.85rem;">
-        <a href="https://www.youtube.com/results?search_query=더블리프트+턴오버" target="_blank" style="color: var(--clr-accent-gold); text-decoration: underline;">[Step 2] 더블리프트 턴오버 영상 더 찾아보기</a>
+        <a href="https://www.youtube.com/watch?v=Gjd4EDm3EWU&t=80s" target="_blank" style="color: var(--clr-accent-gold); text-decoration: underline;">👉 유튜브 원본 영상 페이지로 직접 이동해서 보기 (Step 2 구간)</a>
       </p>
 
       <h3>Step 3: 자연스러움의 완성</h3>
@@ -112,7 +112,7 @@ const POSTS = [
         <iframe src="https://www.youtube.com/embed/Gjd4EDm3EWU?start=150" title="Step 3 Video" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" allowfullscreen></iframe>
       </div>
       <p style="text-align: center; margin-bottom: 2.5rem; font-size: 0.85rem;">
-        <a href="https://www.youtube.com/results?search_query=마술+자연스럽게+하는법" target="_blank" style="color: var(--clr-accent-gold); text-decoration: underline;">[Step 3] 자연스러운 기술 연습법 영상 찾기</a>
+        <a href="https://www.youtube.com/watch?v=Gjd4EDm3EWU&t=150s" target="_blank" style="color: var(--clr-accent-gold); text-decoration: underline;">👉 유튜브 원본 영상 페이지로 직접 이동해서 보기 (Step 3 구간)</a>
       </p>
 
       <blockquote>"연습은 완벽을 만들지 않습니다. 완벽한 연습이 완벽을 만듭니다." — 카드 마술의 格言</blockquote>
