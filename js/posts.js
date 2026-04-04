@@ -91,7 +91,7 @@ const POSTS = [
   },
   {
     id: "coin-magic-basics",
-    title: "코인 마술 기초: 클래식 팜 [업데이트 완료]",
+    title: "코인 마술 기초: 클래식 팜",
     excerpt: "동전을 손바닥에 숨기는 가장 기본적인 기법, 클래식 팜(Classic Palm)을 마스터해봅시다.",
     category: "코인마술",
     date: "2026-04-03",
@@ -175,10 +175,10 @@ const POSTS = [
       <h3>Step 1: 바넘 효과 이해</h3>
       <p>누구나 공감할 보편적 이야기를 자신 있게 전달합니다.</p>
       <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 1.5rem 0; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
-        <iframe src="https://www.youtube.com/embed/1vGhzZfXqC8" title="Mentalism Guide" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/G62H0lq_wxs" title="Mentalism Guide" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
       <p style="text-align: center; margin-bottom: 2.5rem; font-size: 0.85rem;">
-        <a href="https://www.youtube.com/watch?v=1vGhzZfXqC8" target="_blank" style="color: var(--clr-accent-gold); text-decoration: underline;">👉 유튜브 원본 영상 페이지로 직접 이동해서 보기</a>
+        <a href="https://www.youtube.com/watch?v=G62H0lq_wxs" target="_blank" style="color: var(--clr-accent-gold); text-decoration: underline;">👉 유튜브 원본 영상 페이지로 직접 이동해서 보기</a>
       </p>
 
       <h3>Step 2: 관찰과 피드백</h3>
@@ -207,10 +207,10 @@ const POSTS = [
       <h3>Step 1: 기계적 원리</h3>
       <p>와이어나 지지대가 조명에 반사되지 않도록 은폐하는 것이 중요합니다.</p>
       <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 1.5rem 0; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
-        <iframe src="https://www.youtube.com/embed/vW1Q6S4v0Z4" title="Illusion Guide" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/vp9S-u-8Nlo" title="Illusion Guide" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
       <p style="text-align: center; margin-bottom: 2.5rem; font-size: 0.85rem;">
-        <a href="https://www.youtube.com/watch?v=vW1Q6S4v0Z4" target="_blank" style="color: var(--clr-accent-gold); text-decoration: underline;">👉 유튜브 원본 영상 페이지로 직접 이동해서 보기</a>
+        <a href="https://www.youtube.com/watch?v=vp9S-u-8Nlo" target="_blank" style="color: var(--clr-accent-gold); text-decoration: underline;">👉 유튜브 원본 영상 페이지로 직접 이동해서 보기</a>
       </p>
 
       <h3>Step 2: 감정적 부양</h3>
@@ -236,10 +236,10 @@ const POSTS = [
       <h3>Step 1: 시계공의 섬세함</h3>
       <p>정교한 기계 장치인 오토마타를 마술에 도입했습니다.</p>
       <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 1.5rem 0; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
-        <iframe src="https://www.youtube.com/embed/k45_1yHh9L0" title="History Guide" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/7gU4vNbe1y8" title="History Guide" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
       <p style="text-align: center; margin-bottom: 2.5rem; font-size: 0.85rem;">
-        <a href="https://www.youtube.com/watch?v=k45_1yHh9L0" target="_blank" style="color: var(--clr-accent-gold); text-decoration: underline;">👉 유튜브 원본 영상 페이지로 직접 이동해서 보기</a>
+        <a href="https://www.youtube.com/watch?v=7gU4vNbe1y8" target="_blank" style="color: var(--clr-accent-gold); text-decoration: underline;">👉 유튜브 원본 영상 페이지로 직접 이동해서 보기</a>
       </p>
 
       <h3>Step 2: 복장의 현대화</h3>
@@ -265,10 +265,10 @@ const POSTS = [
       <h3>Step 1: 손 모양의 이완</h3>
       <p>무언가를 쥐고 있어도 손가락이 굳어 보이면 안 됩니다.</p>
       <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 1.5rem 0; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
-        <iframe src="https://www.youtube.com/embed/y5jU-9nE-vQ" title="Hand Guide" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/Gf7XW0S_d14" title="Hand Guide" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
       <p style="text-align: center; margin-bottom: 2.5rem; font-size: 0.85rem;">
-        <a href="https://www.youtube.com/watch?v=y5jU-9nE-vQ" target="_blank" style="color: var(--clr-accent-gold); text-decoration: underline;">👉 유튜브 원본 영상 페이지로 직접 이동해서 보기</a>
+        <a href="https://www.youtube.com/watch?v=Gf7XW0S_d14" target="_blank" style="color: var(--clr-accent-gold); text-decoration: underline;">👉 유튜브 원본 영상 페이지로 직접 이동해서 보기</a>
       </p>
 
       <h3>Step 2: 앵글 제어</h3>
