@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html class="dark" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>루틴 빌딩 — Illusionist</title>
+<meta name="description" content="단일 트릭을 여러 페이즈로 구성하여 점점 불가능해지는 루틴을 만드는 방법"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script>
+tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "surface-bright": "#393939", "on-error-container": "#ffdad6", "primary-fixed-dim": "#f3bf40",
+                "on-surface-variant": "#d2c5ae", "surface-dim": "#131313", "on-background": "#e5e2e1",
+                "background": "#131313", "outline-variant": "#4f4635", "error-container": "#93000a",
+                "on-primary-container": "#6b4f00", "surface-container-highest": "#353534",
+                "surface-tint": "#f3bf40", "inverse-surface": "#e5e2e1",
+                "surface-container-lowest": "#0e0e0e", "surface-container-high": "#2a2a2a",
+                "secondary": "#dfc389", "outline": "#9b8f7b", "surface-variant": "#353534",
+                "tertiary": "#c2ebff", "error": "#ffb4ab", "on-primary": "#3f2e00",
+                "primary": "#ffe1a5", "tertiary-container": "#6dd5ff",
+                "surface-container": "#201f1f", "inverse-primary": "#785a00",
+                "secondary-container": "#574416", "primary-fixed": "#ffdf9d",
+                "on-error": "#690005", "surface": "#131313",
+                "primary-container": "#f5c142", "on-surface": "#e5e2e1",
+                "surface-container-low": "#1c1b1b"
+            },
+            "borderRadius": { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+            "fontFamily": { "headline": ["Newsreader"], "body": ["Newsreader"], "label": ["Newsreader"] }
+        }
+    }
+}
+</script>
+<style>
+body { font-family: 'Newsreader', serif; }
+.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+</style>
+</head>
+<body class="bg-background text-on-background antialiased selection:bg-primary-container selection:text-on-primary-container">
+
+<nav class="fixed top-0 w-full z-50 bg-[#131313]/90 backdrop-blur-md flex justify-between items-center px-8 h-20 max-w-full" style="background-color:#1c1b1b">
+    <a href="../../index.html" class="text-2xl font-bold text-[#f5c142] italic tracking-wide hover:opacity-80 transition-opacity">🪄 Illusionist</a>
+    <div class="hidden md:flex items-center gap-8">
+        <a class="text-gray-400 tracking-wide hover:text-[#f5c142] transition-colors duration-300" href="../../index.html">Main</a>
+        <a class="text-gray-400 tracking-wide hover:text-[#f5c142] transition-colors duration-300" href="../../about.html">About</a>
+        <a class="text-gray-400 tracking-wide hover:text-[#f5c142] transition-colors duration-300" href="https://github.com/finale7942" target="_blank">GitHub</a>
+    </div>
+    <div class="md:hidden">
+        <span class="material-symbols-outlined text-[#f5c142] cursor-pointer">menu</span>
+    </div>
+</nav>
+
+<aside class="fixed left-0 top-20 h-screen w-64 hidden lg:block flex flex-col py-10 gap-6" style="background-color:#0e0e0e">
+    <div class="px-8">
+        <h3 class="text-lg font-medium text-[#f5c142]">Table of Contents</h3>
+        <p class="text-sm italic text-[#f5c142]/60">🎪 쇼맨십</p>
+    </div>
+    <nav class="flex flex-col gap-2 mt-4">
+        <a class="flex items-center gap-3 text-[#f5c142] font-bold border-l-4 border-[#f5c142] pl-4 hover:bg-[#393939]/20 transition-all py-2" href="#overview">
+            <span class="material-symbols-outlined text-sm">menu_book</span><span class="text-sm italic">Overview</span>
+        </a>
+        <a class="flex items-center gap-3 text-gray-500 pl-4 hover:bg-[#393939]/20 transition-all py-2" href="#preparation">
+            <span class="material-symbols-outlined text-sm">auto_fix_high</span><span class="text-sm italic">Preparation</span>
+        </a>
+        <a class="flex items-center gap-3 text-gray-500 pl-4 hover:bg-[#393939]/20 transition-all py-2" href="#execution">
+            <span class="material-symbols-outlined text-sm">ads_click</span><span class="text-sm italic">Execution</span>
+        </a>
+        <a class="flex items-center gap-3 text-gray-500 pl-4 hover:bg-[#393939]/20 transition-all py-2" href="#pro-tips">
+            <span class="material-symbols-outlined text-sm">stars</span><span class="text-sm italic">Pro-tips</span>
+        </a>
+    </nav>
+</aside>
+
+<main class="lg:ml-64 pt-20">
+    <section class="relative min-h-[600px] flex flex-col items-center justify-center px-6 text-center" id="overview">
+        <div class="absolute inset-0 z-0 opacity-40"><div class="w-full h-full bg-gradient-to-b from-transparent to-background"></div></div>
+        <div class="z-10 max-w-4xl">
+            <div class="flex items-center justify-center gap-4 mb-6">
+                <span class="inline-block py-1 px-4 rounded-full bg-surface-container-highest text-on-surface-variant text-xs uppercase tracking-[0.2em] font-medium border border-outline-variant/20">🎪 쇼맨십</span>
+                <span class="inline-flex items-center gap-1 py-1 px-3 rounded-full bg-surface-container-highest text-on-surface-variant text-xs border border-outline-variant/20"><div class="w-2 h-2 rounded-full bg-primary-container"></div><div class="w-2 h-2 rounded-full bg-primary-container"></div><div class="w-2 h-2 rounded-full bg-primary-container"></div> <span class="ml-1">고급</span></span>
+                <span class="text-xs text-on-surface-variant">2026.05.16</span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-headline font-bold text-on-background italic leading-tight">루틴 빌딩: <br/><span class="text-primary-container">Routine Building</span></h1>
+            <p class="mt-8 text-xl md:text-2xl font-body text-on-surface-variant italic max-w-2xl mx-auto leading-relaxed">단일 트릭을 여러 페이즈로 구성하여 점점 불가능해지는 루틴을 만드는 방법</p>
+        </div>
+    </section>
+
+    <section class="max-w-4xl mx-auto px-6 mb-32" id="preparation">
+        <div class="mb-12">
+            <h2 class="text-3xl font-headline font-medium text-primary-container mb-2">The Ritual Tools</h2>
+            <div class="h-1 w-20 bg-primary-container"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="space-y-8">
+                <div class="group flex gap-6 items-start">
+                    <div class="flex-shrink-0 w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center text-primary-container group-hover:bg-primary-container group-hover:text-on-primary transition-all duration-300">
+                        <span class="material-symbols-outlined">view_timeline</span>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-headline text-on-background mb-2">루틴 설계도</h4>
+                        <p class="text-on-surface-variant font-body leading-relaxed">각 페이즈의 흐름과 에스컬레이션을 시각화하세요.</p>
+                    </div>
+                </div>
+                <div class="group flex gap-6 items-start">
+                    <div class="flex-shrink-0 w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center text-primary-container group-hover:bg-primary-container group-hover:text-on-primary transition-all duration-300">
+                        <span class="material-symbols-outlined">videocam</span>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-headline text-on-background mb-2">카메라</h4>
+                        <p class="text-on-surface-variant font-body leading-relaxed">리허설을 촬영하여 분석하세요.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-surface-container-lowest p-8 rounded-lg border-l-4 border-[#f5c142] relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-4 opacity-10"><span class="material-symbols-outlined text-6xl">ink_pen</span></div>
+                <h4 class="text-primary-container uppercase tracking-widest text-xs font-bold mb-4">Master's Note</h4>
+                <p class="text-on-surface font-body italic leading-loose">하나의 트릭은 '놀라움'을 줍니다. 하지만 잘 구성된 루틴은 '경이로움'을 줍니다. 차이는 구조에 있습니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-32 py-24" id="execution" style="background-color:rgba(28,27,27,0.3)">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl font-headline font-bold text-on-background mb-4">The Performance</h2>
+                <p class="text-on-surface-variant italic">단계별로 따라하는 루틴 빌딩의 핵심 기법</p>
+            </div>
+            <div class="space-y-32">
+                <div class="flex flex-col md:flex-row gap-12 items-center">
+                    <div class="w-full md:w-1/2 aspect-video overflow-hidden rounded-lg bg-surface-container-high relative group flex items-center justify-center">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="페이즈 설계 영상" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute inset-0 w-full h-full"></iframe>
+                        <div class="absolute bottom-0 left-0 bg-primary-container text-on-primary-container px-6 py-2 font-headline font-bold text-xl z-10">I. Phase Design</div>
+                    </div>
+                    <div class="w-full md:w-1/2 space-y-6">
+                        <h3 class="text-3xl font-headline italic text-primary">페이즈 설계</h3>
+                        <p class="text-lg font-body text-on-surface-variant leading-relaxed">각 반복이 이전보다 더 불가능해지도록 조건을 강화합니다.</p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-2 h-2 rounded-full bg-primary-container"></div><div class="w-2 h-2 rounded-full bg-outline-variant"></div><div class="w-2 h-2 rounded-full bg-outline-variant"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row-reverse gap-12 items-center">
+                    <div class="w-full md:w-1/2 aspect-video overflow-hidden rounded-lg bg-surface-container-high relative group flex items-center justify-center">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="에스컬레이션 원칙 영상" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute inset-0 w-full h-full"></iframe>
+                        <div class="absolute bottom-0 right-0 bg-primary-container text-on-primary-container px-6 py-2 font-headline font-bold text-xl z-10">II. Escalation</div>
+                    </div>
+                    <div class="w-full md:w-1/2 space-y-6 md:text-right">
+                        <h3 class="text-3xl font-headline italic text-primary">에스컬레이션 원칙</h3>
+                        <p class="text-lg font-body text-on-surface-variant leading-relaxed">쉬운 것 → 어려운 것 → 불가능한 것. 이 흐름을 지키세요.</p>
+                        <div class="flex items-center gap-3 md:justify-end">
+                            <div class="w-2 h-2 rounded-full bg-primary-container"></div><div class="w-2 h-2 rounded-full bg-primary-container"></div><div class="w-2 h-2 rounded-full bg-outline-variant"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row gap-12 items-center">
+                    <div class="w-full md:w-1/2 aspect-video overflow-hidden rounded-lg bg-surface-container-high relative group flex items-center justify-center">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="콜백과 서프라이즈 영상" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute inset-0 w-full h-full"></iframe>
+                        <div class="absolute bottom-0 left-0 bg-primary-container text-on-primary-container px-6 py-2 font-headline font-bold text-xl z-10">III. Callback & Surprise</div>
+                    </div>
+                    <div class="w-full md:w-1/2 space-y-6">
+                        <h3 class="text-3xl font-headline italic text-primary">콜백과 서프라이즈</h3>
+                        <p class="text-lg font-body text-on-surface-variant leading-relaxed">이전 페이즈의 요소를 마지막에 다시 등장시켜 구조적 완결성을 줍니다.</p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-2 h-2 rounded-full bg-primary-container"></div><div class="w-2 h-2 rounded-full bg-primary-container"></div><div class="w-2 h-2 rounded-full bg-primary-container"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-4xl mx-auto px-6 mb-32" id="pro-tips">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-surface-container-high p-10 rounded-lg shadow-xl relative overflow-hidden">
+                <span class="material-symbols-outlined absolute -top-4 -right-4 text-9xl text-white/5 rotate-12">psychology</span>
+                <h4 class="text-[#f5c142] font-headline text-2xl mb-4 italic">Master's Insight</h4>
+                <p class="font-body text-on-surface leading-relaxed italic">"하나의 트릭은 '놀라움'을 줍니다. 하지만 잘 구성된 루틴은 '경이로움'을 줍니다. 차이는 구조에 있습니다."</p>
+            </div>
+            <div class="flex flex-col justify-center space-y-4">
+                    <div class="flex items-center gap-4 text-on-surface-variant">
+                        <span class="material-symbols-outlined text-primary-container">verified</span>
+                        <span class="font-body">3~5 페이즈가 이상적입니다. 너무 많으면 지루해집니다.</span>
+                    </div>
+                    <div class="flex items-center gap-4 text-on-surface-variant">
+                        <span class="material-symbols-outlined text-primary-container">verified</span>
+                        <span class="font-body">각 페이즈 사이에 '숨 쉴 틈'을 주세요. 연속 폭격은 피로를 줍니다.</span>
+                    </div>
+                    <div class="flex items-center gap-4 text-on-surface-variant">
+                        <span class="material-symbols-outlined text-primary-container">verified</span>
+                        <span class="font-body">클라이맥스는 이전과 '차원이 다른' 방법으로 마무리하세요.</span>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-5xl mx-auto px-6 mb-16">
+        <h3 class="text-2xl font-headline text-primary-container mb-8 italic">Related Scrolls</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <a class="group bg-surface-container-low p-6 rounded-lg hover:bg-surface-container-high transition-colors border border-outline-variant/20 hover:border-primary-container/40" href="../mentalism/mental-07-prediction-chest.html">
+                    <p class="text-xs uppercase tracking-widest text-primary-container/60 mb-2">🎪 Related</p>
+                    <h5 class="text-lg font-headline text-on-background group-hover:text-primary-container transition-colors italic">프리딕션 체스트</h5>
+                </a>
+                <a class="group bg-surface-container-low p-6 rounded-lg hover:bg-surface-container-high transition-colors border border-outline-variant/20 hover:border-primary-container/40" href="../showmanship/show-03-performance-structure.html">
+                    <p class="text-xs uppercase tracking-widest text-primary-container/60 mb-2">🎪 Related</p>
+                    <h5 class="text-lg font-headline text-on-background group-hover:text-primary-container transition-colors italic">공연 구성</h5>
+                </a>
+                <a class="group bg-surface-container-low p-6 rounded-lg hover:bg-surface-container-high transition-colors border border-outline-variant/20 hover:border-primary-container/40" href="../card/card-05-ambitious-card.html">
+                    <p class="text-xs uppercase tracking-widest text-primary-container/60 mb-2">🎪 Related</p>
+                    <h5 class="text-lg font-headline text-on-background group-hover:text-primary-container transition-colors italic">앰비셔스 카드</h5>
+                </a>
+        </div>
+    </section>
+
+    <section class="max-w-5xl mx-auto px-6 pb-32">
+        <div class="flex flex-col md:flex-row gap-8 border-t border-outline-variant/30 pt-16">
+            <a class="flex-1 group" href="show-04-stage-presence.html">
+                <p class="text-xs uppercase tracking-widest text-on-surface-variant mb-4 flex items-center gap-2">
+                    <span class="material-symbols-outlined text-sm">arrow_back</span> Previous
+                </p>
+                <div class="bg-surface-container-low p-6 rounded-lg group-hover:bg-surface-container-high transition-colors">
+                    <h5 class="text-xl font-headline text-on-background group-hover:text-primary-container transition-colors italic">무대 존재감</h5>
+                    <p class="text-sm text-on-surface-variant mt-2">등장만으로 시선을 잡는 — 몸짓, 시선, 걸음걸이로 무대를 지배하는 비언...</p>
+                </div>
+            </a>
+        </div>
+    </section>
+</main>
+
+<footer class="w-full py-12 mt-20 flex flex-col items-center justify-center gap-4 text-center" style="background-color:#0e0e0e">
+    <a href="../../index.html" class="text-[#f5c142] font-bold tracking-widest uppercase hover:opacity-80 transition-opacity">🪄 Illusionist</a>
+    <div class="flex gap-8 my-4">
+        <a class="text-xs uppercase tracking-widest text-gray-600 hover:text-[#f5c142] transition-colors" href="../../index.html">Main</a>
+        <a class="text-xs uppercase tracking-widest text-gray-600 hover:text-[#f5c142] transition-colors" href="../../about.html">About</a>
+        <a class="text-xs uppercase tracking-widest text-gray-600 hover:text-[#f5c142] transition-colors" href="https://github.com/finale7942" target="_blank">GitHub</a>
+    </div>
+    <p class="text-xs uppercase tracking-widest text-gray-600">&copy; 2026 Illusionist. All secrets reserved.</p>
+</footer>
+
+</body></html>

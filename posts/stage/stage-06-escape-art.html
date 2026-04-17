@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html class="dark" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>탈출 마술 — Illusionist</title>
+<meta name="description" content="구속복, 수조, 감옥에서 탈출하는 후디니 스타일 마술의 원리와 연출"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script>
+tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "surface-bright": "#393939", "on-error-container": "#ffdad6", "primary-fixed-dim": "#f3bf40",
+                "on-surface-variant": "#d2c5ae", "surface-dim": "#131313", "on-background": "#e5e2e1",
+                "background": "#131313", "outline-variant": "#4f4635", "error-container": "#93000a",
+                "on-primary-container": "#6b4f00", "surface-container-highest": "#353534",
+                "surface-tint": "#f3bf40", "inverse-surface": "#e5e2e1",
+                "surface-container-lowest": "#0e0e0e", "surface-container-high": "#2a2a2a",
+                "secondary": "#dfc389", "outline": "#9b8f7b", "surface-variant": "#353534",
+                "tertiary": "#c2ebff", "error": "#ffb4ab", "on-primary": "#3f2e00",
+                "primary": "#ffe1a5", "tertiary-container": "#6dd5ff",
+                "surface-container": "#201f1f", "inverse-primary": "#785a00",
+                "secondary-container": "#574416", "primary-fixed": "#ffdf9d",
+                "on-error": "#690005", "surface": "#131313",
+                "primary-container": "#f5c142", "on-surface": "#e5e2e1",
+                "surface-container-low": "#1c1b1b"
+            },
+            "borderRadius": { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+            "fontFamily": { "headline": ["Newsreader"], "body": ["Newsreader"], "label": ["Newsreader"] }
+        }
+    }
+}
+</script>
+<style>
+body { font-family: 'Newsreader', serif; }
+.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+</style>
+</head>
+<body class="bg-background text-on-background antialiased selection:bg-primary-container selection:text-on-primary-container">
+
+<nav class="fixed top-0 w-full z-50 bg-[#131313]/90 backdrop-blur-md flex justify-between items-center px-8 h-20 max-w-full" style="background-color:#1c1b1b">
+    <a href="../../index.html" class="text-2xl font-bold text-[#f5c142] italic tracking-wide hover:opacity-80 transition-opacity">🪄 Illusionist</a>
+    <div class="hidden md:flex items-center gap-8">
+        <a class="text-gray-400 tracking-wide hover:text-[#f5c142] transition-colors duration-300" href="../../index.html">Main</a>
+        <a class="text-gray-400 tracking-wide hover:text-[#f5c142] transition-colors duration-300" href="../../about.html">About</a>
+        <a class="text-gray-400 tracking-wide hover:text-[#f5c142] transition-colors duration-300" href="https://github.com/finale7942" target="_blank">GitHub</a>
+    </div>
+    <div class="md:hidden">
+        <span class="material-symbols-outlined text-[#f5c142] cursor-pointer">menu</span>
+    </div>
+</nav>
+
+<aside class="fixed left-0 top-20 h-screen w-64 hidden lg:block flex flex-col py-10 gap-6" style="background-color:#0e0e0e">
+    <div class="px-8">
+        <h3 class="text-lg font-medium text-[#f5c142]">Table of Contents</h3>
+        <p class="text-sm italic text-[#f5c142]/60">🎭 스테이지 일루전</p>
+    </div>
+    <nav class="flex flex-col gap-2 mt-4">
+        <a class="flex items-center gap-3 text-[#f5c142] font-bold border-l-4 border-[#f5c142] pl-4 hover:bg-[#393939]/20 transition-all py-2" href="#overview">
+            <span class="material-symbols-outlined text-sm">menu_book</span><span class="text-sm italic">Overview</span>
+        </a>
+        <a class="flex items-center gap-3 text-gray-500 pl-4 hover:bg-[#393939]/20 transition-all py-2" href="#preparation">
+            <span class="material-symbols-outlined text-sm">auto_fix_high</span><span class="text-sm italic">Preparation</span>
+        </a>
+        <a class="flex items-center gap-3 text-gray-500 pl-4 hover:bg-[#393939]/20 transition-all py-2" href="#execution">
+            <span class="material-symbols-outlined text-sm">ads_click</span><span class="text-sm italic">Execution</span>
+        </a>
+        <a class="flex items-center gap-3 text-gray-500 pl-4 hover:bg-[#393939]/20 transition-all py-2" href="#pro-tips">
+            <span class="material-symbols-outlined text-sm">stars</span><span class="text-sm italic">Pro-tips</span>
+        </a>
+    </nav>
+</aside>
+
+<main class="lg:ml-64 pt-20">
+    <section class="relative min-h-[600px] flex flex-col items-center justify-center px-6 text-center" id="overview">
+        <div class="absolute inset-0 z-0 opacity-40"><div class="w-full h-full bg-gradient-to-b from-transparent to-background"></div></div>
+        <div class="z-10 max-w-4xl">
+            <div class="flex items-center justify-center gap-4 mb-6">
+                <span class="inline-block py-1 px-4 rounded-full bg-surface-container-highest text-on-surface-variant text-xs uppercase tracking-[0.2em] font-medium border border-outline-variant/20">🎭 스테이지 일루전</span>
+                <span class="inline-flex items-center gap-1 py-1 px-3 rounded-full bg-surface-container-highest text-on-surface-variant text-xs border border-outline-variant/20"><div class="w-2 h-2 rounded-full bg-primary-container"></div><div class="w-2 h-2 rounded-full bg-primary-container"></div><div class="w-2 h-2 rounded-full bg-primary-container"></div> <span class="ml-1">고급</span></span>
+                <span class="text-xs text-on-surface-variant">2026.05.01</span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-headline font-bold text-on-background italic leading-tight">탈출 마술: <br/><span class="text-primary-container">Escape Art</span></h1>
+            <p class="mt-8 text-xl md:text-2xl font-body text-on-surface-variant italic max-w-2xl mx-auto leading-relaxed">구속복, 수조, 감옥에서 탈출하는 후디니 스타일 마술의 원리와 연출</p>
+        </div>
+    </section>
+
+    <section class="max-w-4xl mx-auto px-6 mb-32" id="preparation">
+        <div class="mb-12">
+            <h2 class="text-3xl font-headline font-medium text-primary-container mb-2">The Ritual Tools</h2>
+            <div class="h-1 w-20 bg-primary-container"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="space-y-8">
+                <div class="group flex gap-6 items-start">
+                    <div class="flex-shrink-0 w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center text-primary-container group-hover:bg-primary-container group-hover:text-on-primary transition-all duration-300">
+                        <span class="material-symbols-outlined">lock_open</span>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-headline text-on-background mb-2">탈출 장비</h4>
+                        <p class="text-on-surface-variant font-body leading-relaxed">수갑, 구속복, 밧줄 등</p>
+                    </div>
+                </div>
+                <div class="group flex gap-6 items-start">
+                    <div class="flex-shrink-0 w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center text-primary-container group-hover:bg-primary-container group-hover:text-on-primary transition-all duration-300">
+                        <span class="material-symbols-outlined">fitness_center</span>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-headline text-on-background mb-2">체력과 유연성</h4>
+                        <p class="text-on-surface-variant font-body leading-relaxed">탈출 마술은 상당한 신체적 능력을 요구합니다.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-surface-container-lowest p-8 rounded-lg border-l-4 border-[#f5c142] relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-4 opacity-10"><span class="material-symbols-outlined text-6xl">ink_pen</span></div>
+                <h4 class="text-primary-container uppercase tracking-widest text-xs font-bold mb-4">Master's Note</h4>
+                <p class="text-on-surface font-body italic leading-loose">탈출 마술의 본질은 '인간 의지의 승리'입니다. 기법이 아닌 스토리를 팔아야 합니다. 관객이 응원하게 만드세요.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-32 py-24" id="execution" style="background-color:rgba(28,27,27,0.3)">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl font-headline font-bold text-on-background mb-4">The Performance</h2>
+                <p class="text-on-surface-variant italic">단계별로 따라하는 탈출 마술의 핵심 기법</p>
+            </div>
+            <div class="space-y-32">
+                <div class="flex flex-col md:flex-row gap-12 items-center">
+                    <div class="w-full md:w-1/2 aspect-video overflow-hidden rounded-lg bg-surface-container-high relative group flex items-center justify-center">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="후디니의 기법들 영상" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute inset-0 w-full h-full"></iframe>
+                        <div class="absolute bottom-0 left-0 bg-primary-container text-on-primary-container px-6 py-2 font-headline font-bold text-xl z-10">I. Houdini's Methods</div>
+                    </div>
+                    <div class="w-full md:w-1/2 space-y-6">
+                        <h3 class="text-3xl font-headline italic text-primary">후디니의 기법들</h3>
+                        <p class="text-lg font-body text-on-surface-variant leading-relaxed">심링(Shim), 피킹(Picking), 유연성을 이용한 후디니의 핵심 탈출 기법을 이해합니다.</p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-2 h-2 rounded-full bg-primary-container"></div><div class="w-2 h-2 rounded-full bg-outline-variant"></div><div class="w-2 h-2 rounded-full bg-outline-variant"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row-reverse gap-12 items-center">
+                    <div class="w-full md:w-1/2 aspect-video overflow-hidden rounded-lg bg-surface-container-high relative group flex items-center justify-center">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="워터 토처 셀 영상" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute inset-0 w-full h-full"></iframe>
+                        <div class="absolute bottom-0 right-0 bg-primary-container text-on-primary-container px-6 py-2 font-headline font-bold text-xl z-10">II. The Water Torture Cell</div>
+                    </div>
+                    <div class="w-full md:w-1/2 space-y-6 md:text-right">
+                        <h3 class="text-3xl font-headline italic text-primary">워터 토처 셀</h3>
+                        <p class="text-lg font-body text-on-surface-variant leading-relaxed">후디니의 가장 유명한 탈출 — 물에 거꾸로 매달린 상태에서의 탈출 원리를 분석합니다.</p>
+                        <div class="flex items-center gap-3 md:justify-end">
+                            <div class="w-2 h-2 rounded-full bg-primary-container"></div><div class="w-2 h-2 rounded-full bg-primary-container"></div><div class="w-2 h-2 rounded-full bg-outline-variant"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row gap-12 items-center">
+                    <div class="w-full md:w-1/2 aspect-video overflow-hidden rounded-lg bg-surface-container-high relative group flex items-center justify-center">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="현대 탈출 아티스트 영상" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute inset-0 w-full h-full"></iframe>
+                        <div class="absolute bottom-0 left-0 bg-primary-container text-on-primary-container px-6 py-2 font-headline font-bold text-xl z-10">III. Modern Escape Artists</div>
+                    </div>
+                    <div class="w-full md:w-1/2 space-y-6">
+                        <h3 class="text-3xl font-headline italic text-primary">현대 탈출 아티스트</h3>
+                        <p class="text-lg font-body text-on-surface-variant leading-relaxed">현대 탈출 마술사들의 혁신적인 연출과 안전 시스템을 소개합니다.</p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-2 h-2 rounded-full bg-primary-container"></div><div class="w-2 h-2 rounded-full bg-primary-container"></div><div class="w-2 h-2 rounded-full bg-primary-container"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-4xl mx-auto px-6 mb-32" id="pro-tips">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-surface-container-high p-10 rounded-lg shadow-xl relative overflow-hidden">
+                <span class="material-symbols-outlined absolute -top-4 -right-4 text-9xl text-white/5 rotate-12">psychology</span>
+                <h4 class="text-[#f5c142] font-headline text-2xl mb-4 italic">Master's Insight</h4>
+                <p class="font-body text-on-surface leading-relaxed italic">"탈출 마술의 본질은 '인간 의지의 승리'입니다. 기법이 아닌 스토리를 팔아야 합니다. 관객이 응원하게 만드세요."</p>
+            </div>
+            <div class="flex flex-col justify-center space-y-4">
+                    <div class="flex items-center gap-4 text-on-surface-variant">
+                        <span class="material-symbols-outlined text-primary-container">verified</span>
+                        <span class="font-body">안전이 최우선입니다. 모든 탈출에는 비상 탈출 시스템이 반드시 있어야 합니다.</span>
+                    </div>
+                    <div class="flex items-center gap-4 text-on-surface-variant">
+                        <span class="material-symbols-outlined text-primary-container">verified</span>
+                        <span class="font-body">탈출 시간을 일부러 늘려 텐션을 높이는 것도 연출의 일부입니다.</span>
+                    </div>
+                    <div class="flex items-center gap-4 text-on-surface-variant">
+                        <span class="material-symbols-outlined text-primary-container">verified</span>
+                        <span class="font-body">관객의 감정을 '공포 → 긴장 → 안도 → 환호'로 설계하세요.</span>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-5xl mx-auto px-6 mb-16">
+        <h3 class="text-2xl font-headline text-primary-container mb-8 italic">Related Scrolls</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <a class="group bg-surface-container-low p-6 rounded-lg hover:bg-surface-container-high transition-colors border border-outline-variant/20 hover:border-primary-container/40" href="../stage/stage-02-metamorphosis.html">
+                    <p class="text-xs uppercase tracking-widest text-primary-container/60 mb-2">🎭 Related</p>
+                    <h5 class="text-lg font-headline text-on-background group-hover:text-primary-container transition-colors italic">메타모르포시스</h5>
+                </a>
+                <a class="group bg-surface-container-low p-6 rounded-lg hover:bg-surface-container-high transition-colors border border-outline-variant/20 hover:border-primary-container/40" href="../history/hist-03-houdini-era.html">
+                    <p class="text-xs uppercase tracking-widest text-primary-container/60 mb-2">🎭 Related</p>
+                    <h5 class="text-lg font-headline text-on-background group-hover:text-primary-container transition-colors italic">후디니 시대</h5>
+                </a>
+                <a class="group bg-surface-container-low p-6 rounded-lg hover:bg-surface-container-high transition-colors border border-outline-variant/20 hover:border-primary-container/40" href="../showmanship/show-04-stage-presence.html">
+                    <p class="text-xs uppercase tracking-widest text-primary-container/60 mb-2">🎭 Related</p>
+                    <h5 class="text-lg font-headline text-on-background group-hover:text-primary-container transition-colors italic">무대 존재감</h5>
+                </a>
+        </div>
+    </section>
+
+    <section class="max-w-5xl mx-auto px-6 pb-32">
+        <div class="flex flex-col md:flex-row gap-8 border-t border-outline-variant/30 pt-16">
+            <a class="flex-1 group" href="stage-05-vanishing-act.html">
+                <p class="text-xs uppercase tracking-widest text-on-surface-variant mb-4 flex items-center gap-2">
+                    <span class="material-symbols-outlined text-sm">arrow_back</span> Previous
+                </p>
+                <div class="bg-surface-container-low p-6 rounded-lg group-hover:bg-surface-container-high transition-colors">
+                    <h5 class="text-xl font-headline text-on-background group-hover:text-primary-container transition-colors italic">배니싱 액트</h5>
+                    <p class="text-sm text-on-surface-variant mt-2">사람, 동물, 심지어 자유의 여신상까지 — 대형 소실 일루전의 원리...</p>
+                </div>
+            </a>
+        </div>
+    </section>
+</main>
+
+<footer class="w-full py-12 mt-20 flex flex-col items-center justify-center gap-4 text-center" style="background-color:#0e0e0e">
+    <a href="../../index.html" class="text-[#f5c142] font-bold tracking-widest uppercase hover:opacity-80 transition-opacity">🪄 Illusionist</a>
+    <div class="flex gap-8 my-4">
+        <a class="text-xs uppercase tracking-widest text-gray-600 hover:text-[#f5c142] transition-colors" href="../../index.html">Main</a>
+        <a class="text-xs uppercase tracking-widest text-gray-600 hover:text-[#f5c142] transition-colors" href="../../about.html">About</a>
+        <a class="text-xs uppercase tracking-widest text-gray-600 hover:text-[#f5c142] transition-colors" href="https://github.com/finale7942" target="_blank">GitHub</a>
+    </div>
+    <p class="text-xs uppercase tracking-widest text-gray-600">&copy; 2026 Illusionist. All secrets reserved.</p>
+</footer>
+
+</body></html>

@@ -1,124 +1,545 @@
 <!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Illusionist — Magic Tutorial Blog</title>
-  <meta name="description" content="A blog exploring the world of magic. From card magic to stage illusions, discover various magic techniques and tutorials.">
-  <meta name="keywords" content="magic, illusion, card magic, magic tutorial">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪄</text></svg>">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-  <!-- Animated Background -->
-  <div class="bg-magic"></div>
-
-  <!-- Navigation -->
-  <nav class="nav" id="nav">
-    <div class="nav-inner">
-      <a href="index.html" class="nav-logo">
-        <span class="logo-icon">🪄</span>
-        <span>Illusionist</span>
-      </a>
-      <div class="nav-links" id="nav-links">
-        <a href="index.html" class="nav-link active">Main</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="https://github.com/finale7942" class="nav-link" target="_blank" rel="noopener">GitHub</a>
-      </div>
-      <button class="nav-menu-btn" id="nav-menu-btn" aria-label="Open Menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <div class="hero-badge">Magic & Illusion Blog</div>
-      <h1 class="hero-title">
-        Unveiling the<br>
-        <span class="highlight">Secrets</span> of Magic<span class="gold">.</span>
-      </h1>
-      <p class="hero-subtitle">
-        From card magic to stage illusions,<br>
-        learn the principles and techniques step by step.
-      </p>
-      <div class="hero-cta">
-        <a href="#posts" class="btn btn-primary">Explore Posts ✦</a>
-        <a href="about.html" class="btn btn-ghost">About →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Intro Section -->
-  <section class="section" id="about-intro">
-    <div class="section-inner" style="max-width: 720px; margin: 0 auto; text-align: center;">
-      <div>
-        <p class="section-label">About Illusionist</p>
-        <h2 class="section-title" style="font-size: var(--fs-2xl); font-family: var(--font-display); font-weight: 700;">🪄 블로그 소개</h2>
-        <div class="section-divider"></div>
-        <div style="margin-top: var(--sp-2xl); font-size: var(--fs-md); color: var(--clr-text-secondary); line-height: 1.9; text-align: justify; padding: 0 var(--sp-md);">
-          <p style="margin-bottom: var(--sp-lg);">
-            <strong style="color: var(--clr-text-primary); font-weight: 600;">Illusionist</strong>는 마술(Magic)의 다양한 기법과 이론을 체계적으로 정리하는 공간입니다. 
-            처음 마술을 시작하는 분부터 이미 경험이 있는 퍼포머까지, 
-            모든 레벨의 마술사에게 도움이 되는 콘텐츠를 만들어가고 있습니다.
-          </p>
-          <p>
-            카드 마술, 코인 마술, 멘탈리즘, 스테이지 일루전 등 
-            다양한 분야의 기법을 단계별로 설명하며, 
-            단순한 "비밀 공개"가 아닌 <em style="color: var(--clr-accent-gold); font-style: italic;">마술을 예술로 승화시키는 방법</em>에 초점을 맞춥니다.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Posts Section -->
-  <section class="section" id="posts">
-    <div class="section-inner">
-      <div class="section-header animate-on-scroll">
-        <p class="section-label">Latest Posts</p>
-        <h2 class="section-title">Recent Articles</h2>
-        <div class="section-divider"></div>
-      </div>
-
-      <!-- Category Filter -->
-      <div class="filter-bar" id="filter-bar"></div>
-
-      <!-- Posts Grid -->
-      <div class="posts-grid" id="posts-grid"></div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-inner">
-      <p class="footer-text">
-        © 2026 <a href="index.html">Illusionist</a>. All rights reserved.
-      </p>
-      <div class="footer-links">
+<html class="dark" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Illusionist — Unveiling the Secrets of Magic</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<style>
+body { font-family: "Newsreader", serif; background: #131313; color: #e5e2e1; }
+.hero { min-height: 60vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 4rem 2rem; }
+.hero h1 { font-size: 3.5rem; font-weight: 700; font-style: italic; color: #e5e2e1; line-height: 1.2; }
+.hero h1 span { color: #f5c142; }
+.hero p { color: #d2c5ae; font-style: italic; font-size: 1.25rem; margin-top: 1.5rem; max-width: 600px; }
+.filters { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; padding: 1rem 2rem; margin-bottom: 2rem; }
+.filter-btn { padding: 6px 16px; border-radius: 9999px; border: 1px solid #4f4635; background: transparent; color: #d2c5ae; font-family: "Newsreader"; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; }
+.filter-btn:hover, .filter-btn.active { background: #f5c142; color: #131313; border-color: #f5c142; }
+.grid-container { max-width: 1100px; margin: 0 auto; padding: 0 2rem 4rem; display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; }
+.post-card { background: #1c1b1b; border: 1px solid #4f463520; border-radius: 1rem; padding: 1.5rem; transition: all 0.3s; display: block; text-decoration: none; }
+.post-card:hover { border-color: #f5c14260; transform: translateY(-4px); box-shadow: 0 8px 30px rgba(245,193,66,0.08); }
+.card-cat { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 0.5rem; }
+.card-title { font-size: 1.4rem; font-weight: 600; font-style: italic; color: #e5e2e1; margin-bottom: 0.5rem; }
+.card-tagline { font-size: 0.9rem; color: #d2c5ae; line-height: 1.6; margin-bottom: 1rem; }
+.card-meta { font-size: 0.78rem; color: #9b8f7b; }
+.section-title { text-align: center; font-size: 2rem; font-style: italic; color: #f5c142; margin-bottom: 0.5rem; }
+.section-sub { text-align: center; color: #9b8f7b; font-size: 0.9rem; margin-bottom: 2rem; }
+footer { padding: 3rem 2rem; text-align: center; background: #0e0e0e; margin-top: 4rem; }
+footer a { color: #f5c142; text-decoration: none; }
+nav { position: fixed; top: 0; width: 100%; z-index: 50; background: rgba(28,27,27,0.9); backdrop-filter: blur(12px); display: flex; justify-content: space-between; align-items: center; padding: 0 2rem; height: 64px; }
+nav a.logo { font-size: 1.4rem; font-weight: 700; color: #f5c142; font-style: italic; text-decoration: none; }
+nav .links a { color: #9b8f7b; text-decoration: none; margin-left: 2rem; font-size: 0.9rem; transition: color 0.2s; }
+nav .links a:hover { color: #f5c142; }
+.hidden { display: none !important; }
+</style>
+</head><body>
+<nav>
+    <a class="logo" href="index.html">🪄 Illusionist</a>
+    <div class="links">
         <a href="index.html">Main</a>
         <a href="about.html">About</a>
-        <a href="https://github.com/finale7942" target="_blank" rel="noopener">GitHub</a>
-      </div>
+        <a href="https://github.com/finale7942" target="_blank">GitHub</a>
     </div>
-  </footer>
+</nav>
 
-  <!-- Scroll to Top -->
-  <button class="scroll-top" id="scroll-top" aria-label="Scroll to Top">↑</button>
+<div style="height:64px"></div>
 
-  <!-- Scripts -->
-  <script src="js/posts.js?v=6"></script>
-  <script src="js/main.js?v=6"></script>
-  <script>
-    // Initialize Home Page
-    document.addEventListener('DOMContentLoaded', () => {
-      initCategoryFilter();
-      renderPosts('전체');
+<section class="hero">
+    <p style="font-size:0.85rem;color:#9b8f7b;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:1rem">Magic & Illusion Blog</p>
+    <h1>Unveiling the <span>Secrets</span> of Magic.</h1>
+    <p>From card magic to stage illusions, learn the principles and techniques step by step.</p>
+</section>
+
+<h2 class="section-title">The Archive</h2>
+<p class="section-sub">50 scrolls of forbidden knowledge</p>
+
+<div class="filters">
+    <button class="filter-btn active" data-cat="all" style="background:#f5c142;color:#131313">전체</button>
+            <button class="filter-btn" data-cat="card">🃏 카드 마술</button>
+            <button class="filter-btn" data-cat="coin">🪙 코인 마술</button>
+            <button class="filter-btn" data-cat="mentalism">🧠 멘탈리즘</button>
+            <button class="filter-btn" data-cat="stage">🎭 스테이지 일루전</button>
+            <button class="filter-btn" data-cat="misdirection">👁 미스디렉션</button>
+            <button class="filter-btn" data-cat="history">📖 마술 역사</button>
+            <button class="filter-btn" data-cat="showmanship">🎪 쇼맨십</button>
+            <button class="filter-btn" data-cat="sleight">✋ 슬레이트 오브 핸드</button>
+
+</div>
+
+<div class="grid-container" id="posts-grid">
+        <a href="posts/card/card-01-double-lift.html" class="post-card" data-cat="card">
+            <div class="card-cat" style="color:#4a90d9">🃏 카드 마술</div>
+            <div class="card-title">더블 리프트</div>
+            <div class="card-tagline">두 장의 카드를 한 장처럼 뒤집는 기법</div>
+            <div class="card-meta">
+                <span style="color:#4a90d9">●○○</span> 초급 · 2026.04.01
+            </div>
+        </a>
+
+        <a href="posts/card/card-02-palm-technique.html" class="post-card" data-cat="card">
+            <div class="card-cat" style="color:#4a90d9">🃏 카드 마술</div>
+            <div class="card-title">카드 파밍</div>
+            <div class="card-tagline">관객 눈앞에서 카드를 숨기는 비밀</div>
+            <div class="card-meta">
+                <span style="color:#4a90d9">●●○</span> 중급 · 2026.04.02
+            </div>
+        </a>
+
+        <a href="posts/card/card-03-false-shuffle.html" class="post-card" data-cat="card">
+            <div class="card-cat" style="color:#4a90d9">🃏 카드 마술</div>
+            <div class="card-title">폴스 셔플</div>
+            <div class="card-tagline">섞는 척 안 섞는 기술</div>
+            <div class="card-meta">
+                <span style="color:#4a90d9">●●○</span> 중급 · 2026.04.03
+            </div>
+        </a>
+
+        <a href="posts/card/card-04-force-methods.html" class="post-card" data-cat="card">
+            <div class="card-cat" style="color:#4a90d9">🃏 카드 마술</div>
+            <div class="card-title">카드 포스</div>
+            <div class="card-tagline">관객의 자유로운 선택을 디자인하다</div>
+            <div class="card-meta">
+                <span style="color:#4a90d9">●●○</span> 중급 · 2026.04.04
+            </div>
+        </a>
+
+        <a href="posts/card/card-05-ambitious-card.html" class="post-card" data-cat="card">
+            <div class="card-cat" style="color:#4a90d9">🃏 카드 마술</div>
+            <div class="card-title">앰비셔스 카드</div>
+            <div class="card-tagline">세계에서 가장 많이 공연되는 카드 루틴</div>
+            <div class="card-meta">
+                <span style="color:#4a90d9">●●○</span> 중급 · 2026.04.05
+            </div>
+        </a>
+
+        <a href="posts/card/card-06-triumph.html" class="post-card" data-cat="card">
+            <div class="card-cat" style="color:#4a90d9">🃏 카드 마술</div>
+            <div class="card-title">트라이엄프</div>
+            <div class="card-tagline">뒤죽박죽 속 유일한 질서</div>
+            <div class="card-meta">
+                <span style="color:#4a90d9">●●○</span> 중급 · 2026.04.06
+            </div>
+        </a>
+
+        <a href="posts/card/card-07-color-change.html" class="post-card" data-cat="card">
+            <div class="card-cat" style="color:#4a90d9">🃏 카드 마술</div>
+            <div class="card-title">컬러 체인지</div>
+            <div class="card-tagline">눈앞에서 바뀌는 카드</div>
+            <div class="card-meta">
+                <span style="color:#4a90d9">●●○</span> 중급 · 2026.04.07
+            </div>
+        </a>
+
+        <a href="posts/card/card-08-card-to-pocket.html" class="post-card" data-cat="card">
+            <div class="card-cat" style="color:#4a90d9">🃏 카드 마술</div>
+            <div class="card-title">카드 투 포켓</div>
+            <div class="card-tagline">불가능한 이동의 연출</div>
+            <div class="card-meta">
+                <span style="color:#4a90d9">●●●</span> 고급 · 2026.04.08
+            </div>
+        </a>
+
+        <a href="posts/card/card-09-sandwich-effect.html" class="post-card" data-cat="card">
+            <div class="card-cat" style="color:#4a90d9">🃏 카드 마술</div>
+            <div class="card-title">샌드위치 이펙트</div>
+            <div class="card-tagline">두 카드 사이의 마법</div>
+            <div class="card-meta">
+                <span style="color:#4a90d9">●●○</span> 중급 · 2026.04.09
+            </div>
+        </a>
+
+        <a href="posts/card/card-10-acaan.html" class="post-card" data-cat="card">
+            <div class="card-cat" style="color:#4a90d9">🃏 카드 마술</div>
+            <div class="card-title">ACAAN</div>
+            <div class="card-tagline">카드 마술의 성배</div>
+            <div class="card-meta">
+                <span style="color:#4a90d9">●●●</span> 고급 · 2026.04.10
+            </div>
+        </a>
+
+        <a href="posts/coin/coin-01-classic-palm.html" class="post-card" data-cat="coin">
+            <div class="card-cat" style="color:#e6a23c">🪙 코인 마술</div>
+            <div class="card-title">클래식 팜</div>
+            <div class="card-tagline">코인 마술의 시작</div>
+            <div class="card-meta">
+                <span style="color:#e6a23c">●○○</span> 초급 · 2026.04.11
+            </div>
+        </a>
+
+        <a href="posts/coin/coin-02-french-drop.html" class="post-card" data-cat="coin">
+            <div class="card-cat" style="color:#e6a23c">🪙 코인 마술</div>
+            <div class="card-title">프렌치 드롭</div>
+            <div class="card-tagline">가장 오래된 코인 배니시</div>
+            <div class="card-meta">
+                <span style="color:#e6a23c">●○○</span> 초급 · 2026.04.12
+            </div>
+        </a>
+
+        <a href="posts/coin/coin-03-shuttle-pass.html" class="post-card" data-cat="coin">
+            <div class="card-cat" style="color:#e6a23c">🪙 코인 마술</div>
+            <div class="card-title">셔틀 패스</div>
+            <div class="card-tagline">자연스러운 가짜 전달</div>
+            <div class="card-meta">
+                <span style="color:#e6a23c">●●○</span> 중급 · 2026.04.13
+            </div>
+        </a>
+
+        <a href="posts/coin/coin-04-coin-across.html" class="post-card" data-cat="coin">
+            <div class="card-cat" style="color:#e6a23c">🪙 코인 마술</div>
+            <div class="card-title">코인 어크로스</div>
+            <div class="card-tagline">한 손에서 다른 손으로의 이동</div>
+            <div class="card-meta">
+                <span style="color:#e6a23c">●●○</span> 중급 · 2026.04.14
+            </div>
+        </a>
+
+        <a href="posts/coin/coin-05-matrix.html" class="post-card" data-cat="coin">
+            <div class="card-cat" style="color:#e6a23c">🪙 코인 마술</div>
+            <div class="card-title">매트릭스</div>
+            <div class="card-tagline">4개 코인의 불가능한 집합</div>
+            <div class="card-meta">
+                <span style="color:#e6a23c">●●●</span> 고급 · 2026.04.15
+            </div>
+        </a>
+
+        <a href="posts/coin/coin-06-coin-bite.html" class="post-card" data-cat="coin">
+            <div class="card-cat" style="color:#e6a23c">🪙 코인 마술</div>
+            <div class="card-title">코인 바이트</div>
+            <div class="card-tagline">입으로 깨무는 코인</div>
+            <div class="card-meta">
+                <span style="color:#e6a23c">●○○</span> 초급 · 2026.04.16
+            </div>
+        </a>
+
+        <a href="posts/coin/coin-07-hanging-coins.html" class="post-card" data-cat="coin">
+            <div class="card-cat" style="color:#e6a23c">🪙 코인 마술</div>
+            <div class="card-title">행잉 코인즈</div>
+            <div class="card-tagline">공중에 매달린 코인</div>
+            <div class="card-meta">
+                <span style="color:#e6a23c">●●○</span> 중급 · 2026.04.17
+            </div>
+        </a>
+
+        <a href="posts/coin/coin-08-coins-through-table.html" class="post-card" data-cat="coin">
+            <div class="card-cat" style="color:#e6a23c">🪙 코인 마술</div>
+            <div class="card-title">코인스 쓰루 테이블</div>
+            <div class="card-tagline">테이블을 관통하는 코인</div>
+            <div class="card-meta">
+                <span style="color:#e6a23c">●●●</span> 고급 · 2026.04.18
+            </div>
+        </a>
+
+        <a href="posts/mentalism/mental-01-cold-reading.html" class="post-card" data-cat="mentalism">
+            <div class="card-cat" style="color:#e25555">🧠 멘탈리즘</div>
+            <div class="card-title">콜드 리딩</div>
+            <div class="card-tagline">처음 만난 사람의 마음을 읽다</div>
+            <div class="card-meta">
+                <span style="color:#e25555">●●○</span> 중급 · 2026.04.19
+            </div>
+        </a>
+
+        <a href="posts/mentalism/mental-02-hot-reading.html" class="post-card" data-cat="mentalism">
+            <div class="card-cat" style="color:#e25555">🧠 멘탈리즘</div>
+            <div class="card-title">핫 리딩</div>
+            <div class="card-tagline">미리 알고 시작하는 독심술</div>
+            <div class="card-meta">
+                <span style="color:#e25555">●●○</span> 중급 · 2026.04.20
+            </div>
+        </a>
+
+        <a href="posts/mentalism/mental-03-center-tear.html" class="post-card" data-cat="mentalism">
+            <div class="card-cat" style="color:#e25555">🧠 멘탈리즘</div>
+            <div class="card-title">센터 티어</div>
+            <div class="card-tagline">접힌 종이 속 비밀을 알아내다</div>
+            <div class="card-meta">
+                <span style="color:#e25555">●●○</span> 중급 · 2026.04.21
+            </div>
+        </a>
+
+        <a href="posts/mentalism/mental-04-swami-gimmick.html" class="post-card" data-cat="mentalism">
+            <div class="card-cat" style="color:#e25555">🧠 멘탈리즘</div>
+            <div class="card-title">스와미 기믹</div>
+            <div class="card-tagline">예언을 나중에 쓰는 도구</div>
+            <div class="card-meta">
+                <span style="color:#e25555">●○○</span> 초급 · 2026.04.22
+            </div>
+        </a>
+
+        <a href="posts/mentalism/mental-05-book-test.html" class="post-card" data-cat="mentalism">
+            <div class="card-cat" style="color:#e25555">🧠 멘탈리즘</div>
+            <div class="card-title">북 테스트</div>
+            <div class="card-tagline">책 속 한 단어를 알아맞히다</div>
+            <div class="card-meta">
+                <span style="color:#e25555">●●○</span> 중급 · 2026.04.23
+            </div>
+        </a>
+
+        <a href="posts/mentalism/mental-06-dual-reality.html" class="post-card" data-cat="mentalism">
+            <div class="card-cat" style="color:#e25555">🧠 멘탈리즘</div>
+            <div class="card-title">듀얼 리얼리티</div>
+            <div class="card-tagline">관객마다 다른 현실</div>
+            <div class="card-meta">
+                <span style="color:#e25555">●●●</span> 고급 · 2026.04.24
+            </div>
+        </a>
+
+        <a href="posts/mentalism/mental-07-prediction-chest.html" class="post-card" data-cat="mentalism">
+            <div class="card-cat" style="color:#e25555">🧠 멘탈리즘</div>
+            <div class="card-title">프리딕션 체스트</div>
+            <div class="card-tagline">봉인된 예언의 위엄</div>
+            <div class="card-meta">
+                <span style="color:#e25555">●●○</span> 중급 · 2026.04.25
+            </div>
+        </a>
+
+        <a href="posts/stage/stage-01-zig-zag-illusion.html" class="post-card" data-cat="stage">
+            <div class="card-cat" style="color:#67c23a">🎭 스테이지 일루전</div>
+            <div class="card-title">지그재그 일루전</div>
+            <div class="card-tagline">몸이 세 토막으로 나뉘다</div>
+            <div class="card-meta">
+                <span style="color:#67c23a">●●○</span> 중급 · 2026.04.26
+            </div>
+        </a>
+
+        <a href="posts/stage/stage-02-metamorphosis.html" class="post-card" data-cat="stage">
+            <div class="card-cat" style="color:#67c23a">🎭 스테이지 일루전</div>
+            <div class="card-title">메타모르포시스</div>
+            <div class="card-tagline">순간 교체의 전율</div>
+            <div class="card-meta">
+                <span style="color:#67c23a">●●●</span> 고급 · 2026.04.27
+            </div>
+        </a>
+
+        <a href="posts/stage/stage-03-sawing-in-half.html" class="post-card" data-cat="stage">
+            <div class="card-cat" style="color:#67c23a">🎭 스테이지 일루전</div>
+            <div class="card-title">인체 절단</div>
+            <div class="card-tagline">100년의 일루전</div>
+            <div class="card-meta">
+                <span style="color:#67c23a">●●○</span> 중급 · 2026.04.28
+            </div>
+        </a>
+
+        <a href="posts/stage/stage-04-levitation.html" class="post-card" data-cat="stage">
+            <div class="card-cat" style="color:#67c23a">🎭 스테이지 일루전</div>
+            <div class="card-title">레비테이션</div>
+            <div class="card-tagline">공중부양의 꿈</div>
+            <div class="card-meta">
+                <span style="color:#67c23a">●●●</span> 고급 · 2026.04.29
+            </div>
+        </a>
+
+        <a href="posts/stage/stage-05-vanishing-act.html" class="post-card" data-cat="stage">
+            <div class="card-cat" style="color:#67c23a">🎭 스테이지 일루전</div>
+            <div class="card-title">배니싱 액트</div>
+            <div class="card-tagline">대형 소실의 원리</div>
+            <div class="card-meta">
+                <span style="color:#67c23a">●●○</span> 중급 · 2026.04.30
+            </div>
+        </a>
+
+        <a href="posts/stage/stage-06-escape-art.html" class="post-card" data-cat="stage">
+            <div class="card-cat" style="color:#67c23a">🎭 스테이지 일루전</div>
+            <div class="card-title">탈출 마술</div>
+            <div class="card-tagline">후디니의 유산</div>
+            <div class="card-meta">
+                <span style="color:#67c23a">●●●</span> 고급 · 2026.05.01
+            </div>
+        </a>
+
+        <a href="posts/misdirection/mis-01-what-is-misdirection.html" class="post-card" data-cat="misdirection">
+            <div class="card-cat" style="color:#9b59b6">👁 미스디렉션</div>
+            <div class="card-title">미스디렉션이란?</div>
+            <div class="card-tagline">마술의 진짜 비밀</div>
+            <div class="card-meta">
+                <span style="color:#9b59b6">●○○</span> 초급 · 2026.05.02
+            </div>
+        </a>
+
+        <a href="posts/misdirection/mis-02-time-misdirection.html" class="post-card" data-cat="misdirection">
+            <div class="card-cat" style="color:#9b59b6">👁 미스디렉션</div>
+            <div class="card-title">시간 미스디렉션</div>
+            <div class="card-tagline">기억을 재구성하다</div>
+            <div class="card-meta">
+                <span style="color:#9b59b6">●●○</span> 중급 · 2026.05.03
+            </div>
+        </a>
+
+        <a href="posts/misdirection/mis-03-visual-misdirection.html" class="post-card" data-cat="misdirection">
+            <div class="card-cat" style="color:#9b59b6">👁 미스디렉션</div>
+            <div class="card-title">시각적 미스디렉션</div>
+            <div class="card-tagline">눈길을 조종하다</div>
+            <div class="card-meta">
+                <span style="color:#9b59b6">●●○</span> 중급 · 2026.05.04
+            </div>
+        </a>
+
+        <a href="posts/misdirection/mis-04-psychological-force.html" class="post-card" data-cat="misdirection">
+            <div class="card-cat" style="color:#9b59b6">👁 미스디렉션</div>
+            <div class="card-title">심리적 포스</div>
+            <div class="card-tagline">순수한 심리적 유도</div>
+            <div class="card-meta">
+                <span style="color:#9b59b6">●●●</span> 고급 · 2026.05.05
+            </div>
+        </a>
+
+        <a href="posts/misdirection/mis-05-audience-management.html" class="post-card" data-cat="misdirection">
+            <div class="card-cat" style="color:#9b59b6">👁 미스디렉션</div>
+            <div class="card-title">관객 매니지먼트</div>
+            <div class="card-tagline">그룹 주의력 통제</div>
+            <div class="card-meta">
+                <span style="color:#9b59b6">●●○</span> 중급 · 2026.05.06
+            </div>
+        </a>
+
+        <a href="posts/history/hist-01-ancient-magic.html" class="post-card" data-cat="history">
+            <div class="card-cat" style="color:#1abc9c">📖 마술 역사</div>
+            <div class="card-title">고대의 마술</div>
+            <div class="card-tagline">이집트에서 중세까지</div>
+            <div class="card-meta">
+                <span style="color:#1abc9c">●○○</span> 초급 · 2026.05.07
+            </div>
+        </a>
+
+        <a href="posts/history/hist-02-golden-age.html" class="post-card" data-cat="history">
+            <div class="card-cat" style="color:#1abc9c">📖 마술 역사</div>
+            <div class="card-title">마술의 황금기</div>
+            <div class="card-tagline">19세기 그랜드 일루전</div>
+            <div class="card-meta">
+                <span style="color:#1abc9c">●○○</span> 초급 · 2026.05.08
+            </div>
+        </a>
+
+        <a href="posts/history/hist-03-houdini-era.html" class="post-card" data-cat="history">
+            <div class="card-cat" style="color:#1abc9c">📖 마술 역사</div>
+            <div class="card-title">후디니 시대</div>
+            <div class="card-tagline">탈출의 전설</div>
+            <div class="card-meta">
+                <span style="color:#1abc9c">●○○</span> 초급 · 2026.05.09
+            </div>
+        </a>
+
+        <a href="posts/history/hist-04-close-up-revolution.html" class="post-card" data-cat="history">
+            <div class="card-cat" style="color:#1abc9c">📖 마술 역사</div>
+            <div class="card-title">클로즈업 혁명</div>
+            <div class="card-tagline">다이 버논의 유산</div>
+            <div class="card-meta">
+                <span style="color:#1abc9c">●○○</span> 초급 · 2026.05.10
+            </div>
+        </a>
+
+        <a href="posts/history/hist-05-modern-magic.html" class="post-card" data-cat="history">
+            <div class="card-cat" style="color:#1abc9c">📖 마술 역사</div>
+            <div class="card-title">현대 마술</div>
+            <div class="card-tagline">TV에서 디지털까지</div>
+            <div class="card-meta">
+                <span style="color:#1abc9c">●○○</span> 초급 · 2026.05.11
+            </div>
+        </a>
+
+        <a href="posts/showmanship/show-01-patter-design.html" class="post-card" data-cat="showmanship">
+            <div class="card-cat" style="color:#e67e22">🎪 쇼맨십</div>
+            <div class="card-title">패터 디자인</div>
+            <div class="card-tagline">말로 마술을 완성하다</div>
+            <div class="card-meta">
+                <span style="color:#e67e22">●●○</span> 중급 · 2026.05.12
+            </div>
+        </a>
+
+        <a href="posts/showmanship/show-02-audience-interaction.html" class="post-card" data-cat="showmanship">
+            <div class="card-cat" style="color:#e67e22">🎪 쇼맨십</div>
+            <div class="card-title">관객 인터랙션</div>
+            <div class="card-tagline">협력자를 무대 위로</div>
+            <div class="card-meta">
+                <span style="color:#e67e22">●●○</span> 중급 · 2026.05.13
+            </div>
+        </a>
+
+        <a href="posts/showmanship/show-03-performance-structure.html" class="post-card" data-cat="showmanship">
+            <div class="card-cat" style="color:#e67e22">🎪 쇼맨십</div>
+            <div class="card-title">공연 구성</div>
+            <div class="card-tagline">감정 곡선 설계</div>
+            <div class="card-meta">
+                <span style="color:#e67e22">●●○</span> 중급 · 2026.05.14
+            </div>
+        </a>
+
+        <a href="posts/showmanship/show-04-stage-presence.html" class="post-card" data-cat="showmanship">
+            <div class="card-cat" style="color:#e67e22">🎪 쇼맨십</div>
+            <div class="card-title">무대 존재감</div>
+            <div class="card-tagline">등장만으로 시선을 잡다</div>
+            <div class="card-meta">
+                <span style="color:#e67e22">●●○</span> 중급 · 2026.05.15
+            </div>
+        </a>
+
+        <a href="posts/showmanship/show-05-routine-building.html" class="post-card" data-cat="showmanship">
+            <div class="card-cat" style="color:#e67e22">🎪 쇼맨십</div>
+            <div class="card-title">루틴 빌딩</div>
+            <div class="card-tagline">트릭을 걸작으로</div>
+            <div class="card-meta">
+                <span style="color:#e67e22">●●●</span> 고급 · 2026.05.16
+            </div>
+        </a>
+
+        <a href="posts/sleight/sleight-01-hand-mechanics.html" class="post-card" data-cat="sleight">
+            <div class="card-cat" style="color:#e84393">✋ 슬레이트 오브 핸드</div>
+            <div class="card-title">핸드 메커닉스</div>
+            <div class="card-tagline">마술사의 손 해부학</div>
+            <div class="card-meta">
+                <span style="color:#e84393">●○○</span> 초급 · 2026.05.17
+            </div>
+        </a>
+
+        <a href="posts/sleight/sleight-02-angles-and-lines.html" class="post-card" data-cat="sleight">
+            <div class="card-cat" style="color:#e84393">✋ 슬레이트 오브 핸드</div>
+            <div class="card-title">앵글과 시선</div>
+            <div class="card-tagline">각도 관리법</div>
+            <div class="card-meta">
+                <span style="color:#e84393">●●○</span> 중급 · 2026.05.18
+            </div>
+        </a>
+
+        <a href="posts/sleight/sleight-03-practice-methods.html" class="post-card" data-cat="sleight">
+            <div class="card-cat" style="color:#e84393">✋ 슬레이트 오브 핸드</div>
+            <div class="card-title">효과적인 연습법</div>
+            <div class="card-tagline">체계적 연습의 과학</div>
+            <div class="card-meta">
+                <span style="color:#e84393">●○○</span> 초급 · 2026.05.19
+            </div>
+        </a>
+
+        <a href="posts/sleight/sleight-04-naturalness.html" class="post-card" data-cat="sleight">
+            <div class="card-cat" style="color:#e84393">✋ 슬레이트 오브 핸드</div>
+            <div class="card-title">자연스러움의 미학</div>
+            <div class="card-tagline">최고의 기술은 안 보이는 것</div>
+            <div class="card-meta">
+                <span style="color:#e84393">●●●</span> 고급 · 2026.05.20
+            </div>
+        </a>
+
+</div>
+
+<footer>
+    <a href="index.html">🪄 Illusionist</a>
+    <div style="margin:1rem 0">
+        <a href="index.html" style="color:#9b8f7b;font-size:0.8rem;margin:0 1rem">Main</a>
+        <a href="about.html" style="color:#9b8f7b;font-size:0.8rem;margin:0 1rem">About</a>
+        <a href="https://github.com/finale7942" target="_blank" style="color:#9b8f7b;font-size:0.8rem;margin:0 1rem">GitHub</a>
+    </div>
+    <p style="color:#4f4635;font-size:0.75rem">&copy; 2026 Illusionist. All secrets reserved.</p>
+</footer>
+
+<script>
+document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => { b.classList.remove('active'); b.style.background=''; b.style.color='#d2c5ae'; });
+        btn.classList.add('active'); btn.style.background='#f5c142'; btn.style.color='#131313';
+        const cat = btn.dataset.cat;
+        document.querySelectorAll('.post-card').forEach(card => {
+            if (cat === 'all' || card.dataset.cat === cat) { card.classList.remove('hidden'); }
+            else { card.classList.add('hidden'); }
+        });
     });
-  </script>
-</body>
-</html>
+});
+</script>
+</body></html>
