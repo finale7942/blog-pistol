@@ -25,7 +25,7 @@ tailwind.config = {
                 "surface-container": "#201f1f", "inverse-primary": "#785a00",
                 "secondary-container": "#574416", "primary-fixed": "#ffdf9d",
                 "on-error": "#690005", "surface": "#131313",
-                "primary-container": "#f5c142", "on-surface": "#e5e2e1",
+                "primary-container": "#c99a10", "on-surface": "#e5e2e1",
                 "surface-container-low": "#1c1b1b"
             },
             "borderRadius": { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
@@ -42,24 +42,24 @@ body { font-family: 'Newsreader', serif; }
 <body class="bg-background text-on-background antialiased selection:bg-primary-container selection:text-on-primary-container">
 
 <nav class="fixed top-0 w-full z-50 bg-[#131313]/90 backdrop-blur-md flex justify-between items-center px-8 h-20 max-w-full" style="background-color:#1c1b1b">
-    <a href="../../index.html" class="text-2xl font-bold text-[#f5c142] italic tracking-wide hover:opacity-80 transition-opacity">🪄 Illusionist</a>
+    <a href="../../index.html" class="text-2xl font-bold text-[#c99a10] italic tracking-wide hover:opacity-80 transition-opacity">🪄 Illusionist</a>
     <div class="hidden md:flex items-center gap-8">
-        <a class="text-gray-400 tracking-wide hover:text-[#f5c142] transition-colors duration-300" href="../../index.html">Main</a>
-        <a class="text-gray-400 tracking-wide hover:text-[#f5c142] transition-colors duration-300" href="../../about.html">About</a>
-        <a class="text-gray-400 tracking-wide hover:text-[#f5c142] transition-colors duration-300" href="https://github.com/finale7942" target="_blank">GitHub</a>
+        <a class="text-gray-400 tracking-wide hover:text-[#c99a10] transition-colors duration-300" href="../../index.html">Main</a>
+        <a class="text-gray-400 tracking-wide hover:text-[#c99a10] transition-colors duration-300" href="../../about.html">About</a>
+        <a class="text-gray-400 tracking-wide hover:text-[#c99a10] transition-colors duration-300" href="https://github.com/finale7942" target="_blank">GitHub</a>
     </div>
     <div class="md:hidden">
-        <span class="material-symbols-outlined text-[#f5c142] cursor-pointer">menu</span>
+        <span class="material-symbols-outlined text-[#c99a10] cursor-pointer">menu</span>
     </div>
 </nav>
 
 <aside class="fixed left-0 top-20 h-screen w-64 hidden lg:block flex flex-col py-10 gap-6" style="background-color:#0e0e0e">
     <div class="px-8">
-        <h3 class="text-lg font-medium text-[#f5c142]">Table of Contents</h3>
-        <p class="text-sm italic text-[#f5c142]/60">📖 마술 역사</p>
+        <h3 class="text-lg font-medium text-[#c99a10]">Table of Contents</h3>
+        <p class="text-sm italic text-[#c99a10]/60">📖 마술 역사</p>
     </div>
     <nav class="flex flex-col gap-2 mt-4">
-        <a class="flex items-center gap-3 text-[#f5c142] font-bold border-l-4 border-[#f5c142] pl-4 hover:bg-[#393939]/20 transition-all py-2" href="#overview">
+        <a class="flex items-center gap-3 text-gray-500 pl-4 hover:bg-[#393939]/20 transition-all py-2" href="#overview">
             <span class="material-symbols-outlined text-sm">menu_book</span><span class="text-sm italic">Overview</span>
         </a>
         <a class="flex items-center gap-3 text-gray-500 pl-4 hover:bg-[#393939]/20 transition-all py-2" href="#preparation">
@@ -114,7 +114,7 @@ body { font-family: 'Newsreader', serif; }
                     </div>
                 </div>
             </div>
-            <div class="bg-surface-container-lowest p-8 rounded-lg border-l-4 border-[#f5c142] relative overflow-hidden">
+            <div class="bg-surface-container-lowest p-8 rounded-lg border-l-4 border-[#c99a10] relative overflow-hidden">
                 <div class="absolute top-0 right-0 p-4 opacity-10"><span class="material-symbols-outlined text-6xl">ink_pen</span></div>
                 <h4 class="text-primary-container uppercase tracking-widest text-xs font-bold mb-4">Master's Note</h4>
                 <p class="text-on-surface font-body italic leading-loose">마술은 항상 그 시대의 미디어와 함께 진화했습니다. 극장 → TV → 유튜브 → 틱톡. 다음 혁명은 어디에서 올까요?</p>
@@ -176,7 +176,7 @@ body { font-family: 'Newsreader', serif; }
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div class="bg-surface-container-high p-10 rounded-lg shadow-xl relative overflow-hidden">
                 <span class="material-symbols-outlined absolute -top-4 -right-4 text-9xl text-white/5 rotate-12">psychology</span>
-                <h4 class="text-[#f5c142] font-headline text-2xl mb-4 italic">Master's Insight</h4>
+                <h4 class="text-[#c99a10] font-headline text-2xl mb-4 italic">Master's Insight</h4>
                 <p class="font-body text-on-surface leading-relaxed italic">"마술은 항상 그 시대의 미디어와 함께 진화했습니다. 극장 → TV → 유튜브 → 틱톡. 다음 혁명은 어디에서 올까요?"</p>
             </div>
             <div class="flex flex-col justify-center space-y-4">
@@ -230,13 +230,49 @@ body { font-family: 'Newsreader', serif; }
 </main>
 
 <footer class="w-full py-12 mt-20 flex flex-col items-center justify-center gap-4 text-center" style="background-color:#0e0e0e">
-    <a href="../../index.html" class="text-[#f5c142] font-bold tracking-widest uppercase hover:opacity-80 transition-opacity">🪄 Illusionist</a>
+    <a href="../../index.html" class="text-[#c99a10] font-bold tracking-widest uppercase hover:opacity-80 transition-opacity">🪄 Illusionist</a>
     <div class="flex gap-8 my-4">
-        <a class="text-xs uppercase tracking-widest text-gray-600 hover:text-[#f5c142] transition-colors" href="../../index.html">Main</a>
-        <a class="text-xs uppercase tracking-widest text-gray-600 hover:text-[#f5c142] transition-colors" href="../../about.html">About</a>
-        <a class="text-xs uppercase tracking-widest text-gray-600 hover:text-[#f5c142] transition-colors" href="https://github.com/finale7942" target="_blank">GitHub</a>
+        <a class="text-xs uppercase tracking-widest text-gray-600 hover:text-[#c99a10] transition-colors" href="../../index.html">Main</a>
+        <a class="text-xs uppercase tracking-widest text-gray-600 hover:text-[#c99a10] transition-colors" href="../../about.html">About</a>
+        <a class="text-xs uppercase tracking-widest text-gray-600 hover:text-[#c99a10] transition-colors" href="https://github.com/finale7942" target="_blank">GitHub</a>
     </div>
     <p class="text-xs uppercase tracking-widest text-gray-600">&copy; 2026 Illusionist. All secrets reserved.</p>
 </footer>
+
+
+<script>
+// TOC active state tracking on scroll
+(function() {
+    const tocLinks = document.querySelectorAll('aside nav a');
+    const sectionIds = ['overview', 'preparation', 'execution', 'pro-tips'];
+    
+    function setActive(activeId) {
+        tocLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href === '#' + activeId) {
+                link.className = 'flex items-center gap-3 text-[#c99a10] font-bold border-l-4 border-[#c99a10] pl-4 hover:bg-[#393939]/20 transition-all py-2';
+            } else {
+                link.className = 'flex items-center gap-3 text-gray-500 pl-4 hover:bg-[#393939]/20 transition-all py-2 group';
+            }
+        });
+    }
+    
+    // Set overview as default
+    setActive('overview');
+    
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && entry.target.id) {
+                setActive(entry.target.id);
+            }
+        });
+    }, { rootMargin: '-100px 0px -50% 0px', threshold: 0.1 });
+    
+    sectionIds.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) observer.observe(el);
+    });
+})();
+</script>
 
 </body></html>
